@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
+    "build": "tsc -p . && vite build",
     "strict": true,
     "jsx": "react-jsx", // Enable React JSX support
     "esModuleInterop": true,
