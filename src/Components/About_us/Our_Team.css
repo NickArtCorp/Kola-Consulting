@@ -1,0 +1,50 @@
+
+
+/* Fade-in animation */
+@keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 1s ease-in-out;
+  }
+  
+  /* Fade-in-up animation */
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fade-in-up {
+    animation: fade-in-up 1s ease-in-out;
+  }
+  
+  /* Hover scaling effect */
+  .hover-scale {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .hover-scale:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Image zoom on hover */
+  .hover-zoom img {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .hover-zoom:hover img {
+    transform: scale(1.1);
+  }

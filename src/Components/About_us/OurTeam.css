@@ -1,0 +1,48 @@
+/* TeamSection.css */
+.team-card-animate {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Add delay for each card */
+  .team-card-animate:nth-child(1) { animation-delay: 0.1s; }
+  .team-card-animate:nth-child(2) { animation-delay: 0.2s; }
+  .team-card-animate:nth-child(3) { animation-delay: 0.3s; }
+  .team-card-animate:nth-child(4) { animation-delay: 0.4s; }
+  .team-card-animate:nth-child(5) { animation-delay: 0.5s; }
+  .team-card-animate:nth-child(6) { animation-delay: 0.6s; }
+  
+  /* Image hover effect */
+  .image-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .image-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(239, 68, 68, 0.1); /* Red with opacity */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .image-container:hover::after {
+    opacity: 1;
+  }
+  
+  /* Tab transition */
+  .tab-transition {
+    transition: all 0.3s ease;
+  }

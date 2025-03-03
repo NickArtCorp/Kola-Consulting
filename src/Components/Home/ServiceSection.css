@@ -1,0 +1,14 @@
+.service-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center rows horizontally */
+    gap: 20px; /* Adjust spacing between rows */
+  }
+  
+  .service-row {
+    display: flex;
+    justify-content: center; /* Center cards horizontally in the row */
+    gap: 20px; /* Adjust spacing between cards */
+  }
+
+  

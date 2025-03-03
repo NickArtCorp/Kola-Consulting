@@ -1,0 +1,31 @@
+nav{
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
+    background-color: rgba(255, 255, 255, 0.7); /* Optional: Add a semi-transparent background color */
+    /* ... other navbar styles ... */
+}
+
+.search-transition {
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 50%;
+    background-color: #C34C5B;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
