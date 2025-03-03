@@ -3,7 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://nickartcorp.github.io/Kola_Consulting/",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
@@ -47,6 +50,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
     "eslint-plugin-tailwindcss": "^3.15.1",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.5.1",
     "prettier-plugin-tailwindcss": "^0.5.12",
     "tailwindcss": "^3.4.17",
