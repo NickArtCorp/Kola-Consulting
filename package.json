@@ -9,7 +9,7 @@
     "deploy": "gh-pages -d dist",
     "tsc":"tsc",
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "npx tsc && vite build",
     "preview": "vite preview",
     "format": "prettier . --write",
     "format:check": "prettier . --check",
