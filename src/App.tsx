@@ -13,10 +13,8 @@ import The_group from './Components/About_us/The_group.jsx';
 import History from './Components/About_us/History.jsx';
 import Our_Team from './Components/About_us/Our_Team.jsx';
 import Our_Code_of_Ethics from './Components/About_us/Our_Code_of_Ethics.jsx';
-import Our_Mission from './Components/About_us/Insights.jsx';
 import Performance from './Performance.jsx';
 import Contact from './Components/About_us/Contact.jsx';
-import DetailPage from './Components/Realisation/DetailPage.jsx';
 import { ThemeProvider } from '@material-tailwind/react';
 import DropdownProvider from './DropdownContext.jsx';
 import Insights from './Components/About_us/Insights.jsx';
@@ -46,7 +44,6 @@ function App() {
             <Route path={t('/Kola-consulting/Performance')} element={<Performance />} />
             <Route path={t('/Kola-consulting/Insights')} element={<Insights />} />
             <Route path={t('/Kola-consulting/Contact')} element={<Contact />} />
-            <Route path={t('/DetailPage/:id')} element={<DetailPage />} />
             </Routes>
         </main>
       </Router>
