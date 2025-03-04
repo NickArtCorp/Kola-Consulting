@@ -26,7 +26,7 @@ function App() {
     <DropdownProvider>
     <ThemeProvider>
       <Router>
-        <main className="flex min-h-screen items-center justify-center gap-2 dark:bg-gray-800 font-sans">
+        <main className="flex min-h-screen items-center justify-center gap-2 bg-gray-100 dark:bg-gray-800 font-sans">
           
             <Routes>
             <Route path={t('/Kola-consulting')} element={<Home />} />
