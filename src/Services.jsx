@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect }  from 'react';
 import Navbar from './Components/Home/Navbar';
 import ServiceSection from './Components/Home/ServiceSection';
 import Spinner from './Spinner';

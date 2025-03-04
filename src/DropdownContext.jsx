@@ -3,7 +3,7 @@ import React, {createContext, useState, useContext} from "react";
 
 const DropdownContext = createContext();
 
-export const DropdownProvider = ({children}) => {
+const DropdownProvider = ({children}) => {
     const [isDropdownHovered, setIsDropdownHovered] = useState(false);
 
     return (
@@ -13,4 +13,5 @@ export const DropdownProvider = ({children}) => {
     );
 };
 
+export default DropdownProvider;
 export const useDropdown = () => useContext(DropdownContext);

@@ -1,13 +1,13 @@
 {
   "name": "flowbite-react-template-vite",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
+  "version": "0.0.0",
   "homepage": "https://nickartcorp.github.io/Kola_Consulting/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "tsc":"tsc",
+    "tsc": "tsc",
     "dev": "vite",
     "build": "npx tsc && vite build",
     "preview": "vite preview",
@@ -36,7 +36,8 @@
     "react-i18next": "^15.4.1",
     "react-router-dom": "^7.1.1",
     "tailwindcss-filters": "^3.0.0",
-    "typed.js": "^2.1.0"
+    "typed.js": "^2.1.0",
+    "web-vitals": "^4.2.4"
   },
   "devDependencies": {
     "@types/react": "^18.3.18",

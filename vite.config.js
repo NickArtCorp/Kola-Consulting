@@ -7,11 +7,18 @@ export default defineConfig({
   plugins: [
     react(), // For React, or vue() if you're using Vue
   ],
+  esbuild: {
+    jsxInject: `import React from 'react'`, // Auto-import React in JSX files
+  },
+
   build: {
     target: 'esnext',
     outDir: 'dist', // Specify the build output directory
   },
   resolve: {
+    
+    extensions: ['.js', '.jsx', '.ts', '.tsx'], // Add '.jsx' to the list of extensions
+  
     alias: {
       '@': '/src', // Optional alias for 'src' directory
     },

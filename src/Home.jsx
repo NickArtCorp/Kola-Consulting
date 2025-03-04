@@ -1,6 +1,5 @@
-import React, { Fragment } from "react"
+import React, { Fragment, useState, useEffect } from "react"
 import "flowbite-react"
-import { useState, useEffect } from "react"
 import Spinner from "./Spinner"
 import Navbar  from "./Components/Home/Navbar"
 import CTA26 from './Components/Home/cta26';
