@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from "react";
+import { Fragment, useState, useEffect } from "react";
 import "flowbite-react";
 import Spinner from "./Spinner";
 import Navbar from "./Components/Home/Navbar";

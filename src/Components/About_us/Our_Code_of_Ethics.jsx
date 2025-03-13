@@ -1,7 +1,4 @@
 
-import React from 'react';
-
-
 
 const Our_Code_of_Ethics = () => {
 

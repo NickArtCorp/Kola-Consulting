@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Navbar from '../Home/Navbar';
 import Spinner from '../../Spinner';
 import { Card } from 'flowbite-react';

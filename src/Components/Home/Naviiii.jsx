@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import './Navbar.css';
 import 'flowbite';
 import { ThemeProvider } from "@material-tailwind/react";

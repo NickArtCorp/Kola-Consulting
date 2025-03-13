@@ -1,5 +1,5 @@
 import "./ServiceSection.css";
-import React, { useState } from "react";
+import { useState } from "react";
 import { Folder, Camera, Activity, FileSearch, Settings, LayoutTemplate, Handshake } from "lucide-react";
 import { motion } from "framer-motion";
 import ServiceModal from "./ServiceModal";

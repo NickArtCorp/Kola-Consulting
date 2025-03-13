@@ -1,4 +1,4 @@
-import React from "react";
+
 import PropTypes from "prop-types";
 import { Card } from "flowbite-react";
 import video1 from "../../videos/lizard.mp4"; // Exemple de vidéo

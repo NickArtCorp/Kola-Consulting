@@ -1,4 +1,4 @@
-import React from 'react';
+
 import './ServiceModal.css';
 import { AnimatePresence, motion } from 'framer-motion';
 

@@ -1,4 +1,4 @@
-import React from "react";
+
 import PropTypes from "prop-types";
 import { Card } from "flowbite-react";
 import image1 from  "../../Images/Hero_Images/photo_1.jpg"; // Example images

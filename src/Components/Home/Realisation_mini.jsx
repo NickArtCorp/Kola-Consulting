@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { useNavigate } from 'react-router-dom';
 import image from '../../Images/profile.jpeg';
 import { useTranslation } from 'react-i18next';
