@@ -1,23 +1,21 @@
-import React, { Fragment, useState, useEffect } from "react"
-import "flowbite-react"
-import Spinner from "./Spinner"
-import Navbar  from "./Components/Home/Navbar"
+import React, { Fragment, useState, useEffect } from "react";
+import "flowbite-react";
+import Spinner from "./Spinner";
+import Navbar from "./Components/Home/Navbar";
 import CTA26 from './Components/Home/cta26';
 import Hero17 from './Components/Home/Hero17';
 import Features24 from './Components/Home/Features24';
 import Footer4 from "./Components/Home/Footer4";
 import Steps2 from "./Components/Home/Steps2";
-import Realisation_mini from "./Components/Home/Realisation_mini"
+import Realisation_mini from "./Components/Home/Realisation_mini";
 import './style.css';
 import './home.css';
-import { useTranslation } from "react-i18next"
-
-
+import { useTranslation } from "react-i18next";
 
 function Home() {
   const { t } = useTranslation();
   const [loading, setLoading] = useState(true);
-  
+
   const handleGetStarted = () => {
     const element = document.getElementById('ready');
     element.scrollIntoView({ behavior: 'smooth' });
@@ -40,16 +38,16 @@ function Home() {
     return <Spinner />;
   }
 
-    return (
-        <main className="font-sans">
-            <Navbar/>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            
-            <Hero17
+  return (
+    <main className="font-sans">
+      <Navbar />
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+
+      <Hero17
         action2={
           <Fragment>
             <span className="home-text114 font-sans " onClick={handleLearnMore}>{t("learnMore")}</span>
@@ -74,9 +72,7 @@ function Home() {
         }
       ></Hero17>
 
-           
-
-            <CTA26
+      <CTA26
         heading1={
           <Fragment>
             <span className="home-text124 font-sans" >
@@ -98,19 +94,18 @@ function Home() {
         }
       ></CTA26>
 
-      
       <Steps2
         step1Description={
           <Fragment>
             <span className="home-text186 font-sans">
-             {t("researchText")}
+              {t("researchText")}
             </span>
           </Fragment>
         }
         step3Description={
           <Fragment>
             <span className="home-text187 font-sans">
-            {t("creationText")}
+              {t("creationText")}
             </span>
           </Fragment>
         }
@@ -124,7 +119,7 @@ function Home() {
         step2Description={
           <Fragment>
             <span className="home-text189 font-sans">
-            {t("ideationText")}
+              {t("ideationText")}
             </span>
           </Fragment>
         }
@@ -141,7 +136,7 @@ function Home() {
         step4Description={
           <Fragment>
             <span className="home-text192 font-sans">
-            {t("implementationText")}
+              {t("implementationText")}
             </span>
           </Fragment>
         }
@@ -152,7 +147,7 @@ function Home() {
         }
       ></Steps2>
 
-      <Realisation_mini className="font-sans "/>
+      <Realisation_mini className="font-sans " />
 
       <Footer4
         id="discover"
@@ -197,10 +192,8 @@ function Home() {
           </Fragment>
         }
       ></Footer4>
-      
-      
-        </main>
-    )
+    </main>
+  )
 }
 
-export default Home
+export default Home;

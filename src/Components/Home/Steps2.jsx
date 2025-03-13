@@ -1,11 +1,11 @@
-import React, { Fragment } from 'react'
+import React, { Fragment } from 'react';
 import { useNavigate } from 'react-router-dom';
-import PropTypes from 'prop-types'
-import '../../style.css'
+import PropTypes from 'prop-types';
+import '../../style.css';
 import '../../home.css';
-import '../../index.css'
-import './steps2.css'
-import { useTranslation } from "react-i18next"
+import '../../index.css';
+import './steps2.css';
+import { useTranslation } from "react-i18next";
 
 const Steps2 = (props) => {
    const navigate = useNavigate();
@@ -153,4 +153,4 @@ Steps2.propTypes = {
   step4Title: PropTypes.element,
 }
 
-export default Steps2
+export default Steps2;

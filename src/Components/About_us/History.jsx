@@ -1,10 +1,7 @@
-
 import React, { useState, useEffect } from "react";
 import Spinner from "../../Spinner"; // Import your spinner component
 import { Clock, Globe, Users, Rocket } from 'lucide-react';
 import Navbar from "../Home/Navbar";
-
-
 
 const History = () => {
 
@@ -22,7 +19,6 @@ const History = () => {
   if (loading) {
     return <Spinner />;
   }
-
 
   return (
     <>
@@ -133,7 +129,5 @@ const History = () => {
   );
 
 };
-
-
 
 export default History;
