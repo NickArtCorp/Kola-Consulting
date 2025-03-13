@@ -1,4 +1,4 @@
-import React from "react";import "./Spinner.css";
+import "./Spinner.css";
 import img from "./Kola-nut-5.png";
 
 const Spinner = () => {
