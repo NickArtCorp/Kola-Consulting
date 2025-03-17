@@ -23,17 +23,11 @@ function App() {
           
             <Routes>
             <Route path={t('/Kola-consulting')} element={<Home />} />
-            <Route path={t('/Kola-consulting/Alert')} element={<Alert />} />
             <Route path={t('/Kola-consulting/About_us')} element={<About_us />} />
             <Route path={t('/Kola-consulting/Services')} element={<Services />} />
             <Route path={t('/Kola-consulting/Realisation')} element={<Realisation />} />
-            <Route path={t('/Kola-consulting/Regions')} element={<Regions />} />
-            <Route path={t('/Kola-consulting/Career')} element={<Career />} />
-            <Route path={t('/Kola-consulting/News')} element={<News />} />
-            <Route path={t('/Kola-consulting/The_group')} element={<The_group />} />
             <Route path={t('/Kola-consulting/History')} element={<History />} />
             <Route path={t('/Kola-consulting/Our_Team')} element={<Our_Team />} />
-            <Route path={t('/Kola-consulting/Our_Code_of_Ethics')} element={<Our_Code_of_Ethics />} />
             <Route path={t('/Kola-consulting/Performance')} element={<Performance />} />
             <Route path={t('/Kola-consulting/Insights')} element={<Insights />} />
             <Route path={t('/Kola-consulting/Contact')} element={<Contact />} />
