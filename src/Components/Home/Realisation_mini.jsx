@@ -12,7 +12,7 @@ const RealisationMini = () => {
   };
 
   return (
-    <section className="bg-gradient-to-r from-gray-50 to-red-100 py-16 px-4 sm:px-6 lg:px-8 font-sans">
+    <section className="bg-gradient-to-r from-gray-50 to-[#e32c662f] py-16 px-4 sm:px-6 lg:px-8 font-sans">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-12 items-center">
           <div className="flex-1 space-y-6">
@@ -27,7 +27,7 @@ const RealisationMini = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <button 
                 onClick={handleClick}
-                className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 transition-colors duration-200 transform hover:scale-105"
+                className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#e32c66] hover:bg-[#c12657] transition-colors duration-200 transform hover:scale-105"
               >
                 {t('exploreButton')}
                 <svg 

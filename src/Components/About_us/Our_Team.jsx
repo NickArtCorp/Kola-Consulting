@@ -99,7 +99,7 @@ const OurTeam = () => {
       <br />
         <div className="container mx-auto px-4">
           <h1 className="text-center text-3xl font-bold mb-12">
-            {t("our")} <span className="text-red-500 ">{t("team")}</span>
+            {t("our")} <span className="text-[#e32c66] ">{t("team")}</span>
           </h1>
 
           {/* Tabs */}
@@ -108,7 +108,7 @@ const OurTeam = () => {
               <button
                 onClick={() => setActiveTab('main')}
                 className={`px-6 py-2 rounded-full transition-all duration-300 ${
-                  activeTab === 'main' ? 'bg-red-500 text-white' : 'bg-white text-gray-600 hover:bg-red-100'
+                  activeTab === 'main' ? 'bg-[#e32c66] text-white' : 'bg-white text-gray-600 hover:bg-red-100'
                 }`}
               >
                 {t('mainTeam')}
@@ -116,7 +116,7 @@ const OurTeam = () => {
               <button
                 onClick={() => setActiveTab('associate')}
                 className={`px-6 py-2 rounded-full transition-all duration-300 ${
-                  activeTab === 'associate' ? 'bg-red-500 text-white' : 'bg-white text-gray-600 hover:bg-red-100'
+                  activeTab === 'associate' ? 'bg-[#e32c66] text-white' : 'bg-white text-gray-600 hover:bg-red-100'
                 }`}
               >
                 {t('associateExperts')}
@@ -140,7 +140,7 @@ const OurTeam = () => {
                     <h5 className="text-xl font-bold tracking-tight text-gray-900">
                       {member.name}
                     </h5>
-                    <span className="text-red-500 font-medium mb-4">{member.role}</span>
+                    <span className="text-[#e32c66] font-medium mb-4">{member.role}</span>
                     <p className="text-gray-600 text-center mb-4">{member.bio}</p>
                     
                     {/* Social Links */}

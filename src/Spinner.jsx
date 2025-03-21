@@ -1,5 +1,5 @@
 import "./Spinner.css";
-import img from "./Kola-nut-5.png";
+import img from "./kolanut2.png";
 
 const Spinner = () => {
   return (

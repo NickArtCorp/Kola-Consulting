@@ -46,7 +46,7 @@ const Realisation = () => {
         <div className="flex bg-gray-200 rounded-full p-1 shadow-md">
           <button
             className={`px-6 py-2 rounded-full transition-all duration-700 ${
-              viewMode === 'videos' ? 'bg-rose-600 text-white shadow' : 'text-gray-600'
+              viewMode === 'videos' ? 'bg-[#e32c66] text-white shadow' : 'text-gray-600'
             }`}
             onClick={() => setViewMode('videos')}
           >
@@ -54,7 +54,7 @@ const Realisation = () => {
           </button>
           <button
             className={`px-6 py-2 rounded-full transition-all duration-700 ${
-              viewMode === 'images' ? 'bg-rose-600 text-white shadow' : 'text-gray-600 '
+              viewMode === 'images' ? 'bg-[#e32c66] text-white shadow' : 'text-gray-600 '
             }`}
             onClick={() => setViewMode('images')}
           >

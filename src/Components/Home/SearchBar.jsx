@@ -30,7 +30,7 @@ const SearchBar = ({ searchQuery, setSearchQuery, selectedVideoType, setSelected
   }, []);
 
   return (
-    <div className="bg-white p-8 rounded-lg w-[900px] mx-auto mt-32 mb-2">
+    <div className="p-8 rounded-lg w-[900px] mx-auto mt-32 mb-2">
       <h1 className="text-3xl font-bold text-gray-800 text-center mb-4">
         <span ref={typingRef}></span>
       </h1>
@@ -54,7 +54,7 @@ const SearchBar = ({ searchQuery, setSearchQuery, selectedVideoType, setSelected
                 />
 
                 {/* Bouton de recherche */}
-        <Button className="w-full md:w-auto border focus:outline-none focus:ring-0  active:scale-105 bg-rose-600" onClick={handleSearchClick}>
+        <Button className="w-full md:w-auto border focus:outline-none focus:ring-0  active:scale-105 bg-[#e32c66]" onClick={handleSearchClick}>
           {t("search2")}
         </Button>
       </div>

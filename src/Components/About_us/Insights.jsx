@@ -157,7 +157,7 @@ const Insights = () => {
               onClick={() => setActiveSection('methodology')}
               className={`px-6 py-2 rounded-full transition-colors duration-300 ${
                 activeSection === 'methodology'
-                  ? 'bg-[#C34C5B] text-white'
+                  ? 'bg-[#c32356] text-white'
                   : 'bg-white text-gray-600 hover:bg-red-100'
               }`}
             >
@@ -169,7 +169,7 @@ const Insights = () => {
               onClick={() => setActiveSection('results')}
               className={`px-6 py-2 rounded-full transition-colors duration-300 ${
                 activeSection === 'results'
-                  ? 'bg-[#C34C5B] text-white'
+                  ? 'bg-[#c32356] text-white'
                   : 'bg-white text-gray-600 hover:bg-red-100'
               }`}
             >

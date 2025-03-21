@@ -65,7 +65,7 @@ const VideoGallery = ({ selectedVideoType, searchQuery }) => {
 
   return (
     
-    <div className="bg-white p-4 md:p-8 rounded-lg shadow-lg max-w-7xl mx-auto">
+    <div className=" p-4 md:p-8 rounded-lg shadow-lg max-w-7xl mx-auto">
 
       {selectedVideoType ?  (
 

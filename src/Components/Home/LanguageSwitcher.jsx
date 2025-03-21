@@ -13,6 +13,7 @@ const LanguageSwitcher = () => {
     { code: 'es', label: 'Español', flag: '🇪🇸' },
     { code: 'de', label: 'Deutsch', flag: '🇩🇪' },
     { code: 'it', label: 'Italiano', flag: '🇮🇹' },
+    { code: 'ml', label: 'Marine', flag: '🇲🇱' },
   ];
 
   const getCurrentLanguageLabel = () => {
@@ -46,7 +47,7 @@ const LanguageSwitcher = () => {
     <div className="relative inline-block text-left" ref={dropdownRef}>
       <button
         type="button"
-        className="inline-flex justify-center w-full rounded-3xl border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#C34C5B]"
+        className="inline-flex justify-center w-full rounded-3xl border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#e32c66]"
         id="options-menu"
         aria-haspopup="true"
         aria-expanded={isOpen}
@@ -63,15 +64,15 @@ const LanguageSwitcher = () => {
           aria-orientation="vertical"
           aria-labelledby="options-menu"
         >
-          <div className="py-1" role="none">
+          <div className="py-1 max-h-[170px] overflow-y-auto" role="none">
             {languages.map((language) => (
               <button
                 key={language.code}
                 onClick={() => changeLanguage(language.code)}
                 className={`flex items-center w-full px-4 py-2 text-sm ${
                   i18n.language === language.code
-                    ? 'text-red-700 bg-gradient-to-r from-gray-50 to-red-100'
-                    : 'text-gray-700 bg-gradient-to-r  hover:bg-red-50 hover:text-red-700'
+                    ? 'text-[#e32c66] bg-gradient-to-r from-gray-50 to-[#e32c6634]'
+                    : 'text-gray-700 bg-gradient-to-r  hover:bg-red-50 hover:text-[#e32c66]'
                 }`}
                 role="menuitem"
               >

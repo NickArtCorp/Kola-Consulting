@@ -21,7 +21,7 @@ const ImageGallery = ({ selectedImageType, searchQuery }) => {
   });
 
   return (
-    <div className="bg-white p-4 md:p-8 rounded-lg shadow-lg max-w-7xl mx-auto">
+    <div className="p-4 md:p-8 rounded-lg shadow-lg max-w-7xl mx-auto">
       {selectedImageType ?  (
 
        <h2 className="text-2xl font-semibold text-gray-800 mb-4">

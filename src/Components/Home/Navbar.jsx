@@ -55,7 +55,7 @@ const Navbar = () => {
                         <ul className="flex flex-col md:flex-row md:items-center md:space-x-8 p-4 md:p-0 ">
                             {/* Navigation Links */}
                             <li>
-                                <a href="/Kola-consulting/" className="nav-link block py-2 px-3 text-gray-900 dark:text-white hover:text-[#C34C5B] dark:hover:text-[#C34C5B] md:p-0">{t('home')}</a>
+                                <a href="/Kola-consulting/" className="nav-link block py-2 px-3 text-gray-900 dark:text-white hover:text-[#e32c66] dark:hover:text-[#e32c66] md:p-0">{t('home')}</a>
                             </li>
 
                             {/* About Us Dropdown */}
@@ -63,7 +63,7 @@ const Navbar = () => {
                                 <button 
                                     id="mega-menu-full-dropdown-button" 
                                     onClick={toggleDropdown} 
-                                    className="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded md:w-auto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#C34C5B] md:p-0 dark:text-white md:dark:hover:text-[#C34C5B] dark:hover:bg-gray-700 dark:hover:text-[#C34C5B] md:dark:hover:bg-transparent dark:border-gray-700"
+                                    className="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded md:w-auto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#e32c66] md:p-0 dark:text-white md:dark:hover:text-[#e32c66] dark:hover:bg-gray-700 dark:hover:text-[#e32c66] md:dark:hover:bg-transparent dark:border-gray-700"
                                 >
                                     {t('aboutUs')} 
                                     <svg className="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
@@ -81,38 +81,47 @@ const Navbar = () => {
                                     >
                                         <div className="grid px-4 py-5 text-gray-900 dark:text-white sm:grid-cols-1 md:px-6 ">
                                             <ul className="">
+                                               <li>
+                                                    <a href="/Kola-consulting/whoWeAre" className="block px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                                        <span className="relative text-gray-900 dark:text-white group-hover:text-[#e32c66] transition-all duration-300">
+                                                            {t('whoWeAre')}
+                                                            <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#e32c66] transition-all duration-300 group-hover:w-full"></span>
+                                                        </span>
+                                                    </a>
+                                                </li>
+
                                                 <li>
                                                     <a href="/Kola-consulting/Insights" className="block px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                                        <span className="relative text-gray-900 dark:text-white group-hover:text-[#C34C5B] transition-all duration-300">
+                                                        <span className="relative text-gray-900 dark:text-white group-hover:text-[#e32c66] transition-all duration-300">
                                                             {t('insights')}
-                                                            <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#C34C5B] transition-all duration-300 group-hover:w-full"></span>
+                                                            <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#e32c66] transition-all duration-300 group-hover:w-full"></span>
                                                         </span>
                                                     </a>
                                                 </li>
 
                                                 <li>
                                                     <a href="/Kola-consulting/Our_Team" className="block px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                                        <span className="relative text-gray-900 dark:text-white group-hover:text-[#C34C5B] transition-all duration-300">
+                                                        <span className="relative text-gray-900 dark:text-white group-hover:text-[#e32c66] transition-all duration-300">
                                                             {t('ourTeam')}
-                                                            <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#C34C5B] transition-all duration-300 group-hover:w-full"></span>
+                                                            <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#e32c66] transition-all duration-300 group-hover:w-full"></span>
                                                         </span>
                                                     </a>
                                                 </li>
 
                                                 <li>
                                                     <a href="/Kola-consulting/Our_Code_Of_Ethics" className="block px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                                        <span className="relative text-gray-900 dark:text-white group-hover:text-[#C34C5B] transition-all duration-300">
+                                                        <span className="relative text-gray-900 dark:text-white group-hover:text-[#e32c66] transition-all duration-300">
                                                             {t('ourCodeOfEthics')}
-                                                            <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#C34C5B] transition-all duration-300 group-hover:w-full"></span>
+                                                            <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#e32c66] transition-all duration-300 group-hover:w-full"></span>
                                                         </span>
                                                     </a>
                                                 </li>
 
                                                 <li>
                                                     <a href="/Kola-consulting/Contact" className="block px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                                        <span className="relative text-gray-900 dark:text-white group-hover:text-[#C34C5B] transition-all duration-300">
+                                                        <span className="relative text-gray-900 dark:text-white group-hover:text-[#e32c66] transition-all duration-300">
                                                             {t('contactUs')}
-                                                            <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#C34C5B] transition-all duration-300 group-hover:w-full"></span>
+                                                            <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#e32c66] transition-all duration-300 group-hover:w-full"></span>
                                                         </span>
                                                     </a>
                                                 </li>
@@ -123,10 +132,10 @@ const Navbar = () => {
                             </li>
 
                             <li>
-                                <a href="/Kola-consulting/Services" className="nav-link block py-2 px-3 text-gray-900 dark:text-white hover:text-[#C34C5B] dark:hover:text-[#C34C5B] md:p-0">{t('services')}</a>
+                                <a href="/Kola-consulting/Services" className="nav-link block py-2 px-3 text-gray-900 dark:text-white hover:text-[#e32c66] dark:hover:text-[#e32c66] md:p-0">{t('services')}</a>
                             </li>
                             <li>
-                                <a href="/Kola-consulting/Realisation" className="nav-link block py-2 px-3 text-gray-900 dark:text-white hover:text-[#C34C5B] dark:hover:text-[#C34C5B] md:p-0">{t('realisation')}</a>
+                                <a href="/Kola-consulting/Realisation" className="nav-link block py-2 px-3 text-gray-900 dark:text-white hover:text-[#e32c66] dark:hover:text-[#e32c66] md:p-0">{t('realisation')}</a>
                             </li>
 
                             {/* Search Bar */}
@@ -139,7 +148,7 @@ const Navbar = () => {
                                         onFocus={() => setIsSearchFocused(true)}
                                         onBlur={() => setIsSearchFocused(false)}
                                     />
-                                    <button className="absolute right-3 top-2.5 text-gray-400 dark:text-gray-300 hover:text-[#C34C5B] dark:hover:text-[#C34C5B]">
+                                    <button className="absolute right-3 top-2.5 text-gray-400 dark:text-gray-300 hover:text-[#e32c66] dark:hover:text-[#e32c66]">
                                         <Search className="h-5 w-5" />
                                     </button>
                                 </div>
@@ -147,7 +156,7 @@ const Navbar = () => {
 
                             {/* Theme Toggle */}
                             <li className="flex items-center">
-                                <DarkThemeToggle className="focus:ring-[#C34C5B]" />
+                                <DarkThemeToggle className="focus:ring-[#e32c66]" />
                             </li>
 
                             {/* Language Switcher */}

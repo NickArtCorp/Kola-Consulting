@@ -30,7 +30,7 @@ const Contact = () => {
         <br />
         <div className="container mx-auto px-4">
           <h1 className="text-center text-3xl font-bold mb-12">
-            Here to <span className="text-red-500">help</span>
+            Here to <span className="text-[#e32c66]">help</span>
           </h1>
 
           {/* TOGGLE BUTTONS */}
@@ -38,7 +38,7 @@ const Contact = () => {
             <button
               onClick={() => setActiveSection("contact")}
               className={`px-6 py-2 rounded-full ${
-                activeSection === "contact" ? "bg-red-500 text-white" : "bg-gray-200"
+                activeSection === "contact" ? "bg-[#e32c66] text-white" : "bg-gray-200"
               }`}
             >
               {t('contactUs')}
@@ -46,7 +46,7 @@ const Contact = () => {
             <button
               onClick={() => setActiveSection("need")}
               className={`px-6 py-2 rounded-full ${
-                activeSection === "need" ? "bg-red-500 text-white" : "bg-gray-200"
+                activeSection === "need" ? "bg-[#e32c66] text-white" : "bg-gray-200"
               }`}
             >
               {t('yourNeed')}
@@ -68,7 +68,7 @@ const Contact = () => {
                       <input
                         type="text"
                         id="name"
-                        className="w-[500px] px-4 py-3 rounded-md bg-gray-100 border-gray-200 focus:outline-none focus:ring-2 focus:ring-red-500"
+                        className="w-full px-4 py-3 rounded-md bg-gray-100 border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#e32c66]"
                         placeholder= {t('fullNamePlaceholder')}
                       />
                     </div>
@@ -79,7 +79,7 @@ const Contact = () => {
                       <input
                         type="email"
                         id="email"
-                        className="w-full px-4 py-3 rounded-md bg-gray-100 border-gray-200 focus:outline-none focus:ring-2 focus:ring-red-500"
+                        className="w-full px-4 py-3 rounded-md bg-gray-100 border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#e32c66]"
                         placeholder={t('emailPlaceholder')}
                       />
                     </div>
@@ -90,7 +90,7 @@ const Contact = () => {
                       <input
                         type="tel"
                         id="phone"
-                        className="w-full px-4 py-3 rounded-md bg-gray-100 border-gray-200 focus:outline-none focus:ring-2 focus:ring-red-500"
+                        className="w-full px-4 py-3 rounded-md bg-gray-100 border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#e32c66]"
                         placeholder= {t('contactNumberPlaceholder')}
                       />
                     </div>
@@ -101,10 +101,10 @@ const Contact = () => {
                       <textarea
                         id="message"
                         rows={4}
-                        className="w-full px-4 py-3 rounded-md bg-gray-100 border-gray-200 focus:outline-none focus:ring-2 focus:ring-red-500"
+                        className="w-full px-4 py-3 rounded-md bg-gray-100 border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#e32c66]"
                         placeholder={t('messagePlaceholder')}
                       />
-                    </div><button className="px-4 py-3 bg-red-500 hover:bg-red-600 text-white rounded-md w-full">
+                    </div><button className="px-4 py-3 bg-[#e32c66] hover:bg-[#c12959] text-white rounded-md w-full">
                       {t('sendMessage')} →
                     </button>
                   </div>
@@ -119,11 +119,11 @@ const Contact = () => {
                 </p>
                 <div className="mt-4 space-y-4">
                   <textarea
-                    className="w-full px-4 py-3 rounded-md bg-gray-100 border-gray-200 focus:outline-none focus:ring-2 focus:ring-red-500"
+                    className="w-full px-4 py-3 rounded-md bg-gray-100 border-gray-200 focus:ring-2 focus:outline-none  focus:ring-[#e32c66]"
                     placeholder={t('yourNeedPlaceholder')}
                     rows={5}
                   />
-                  <button className="px-4 py-3 bg-red-500 hover:bg-red-600 text-white rounded-md w-full">
+                  <button className="px-4 py-3 bg-[#e32c66] hover:bg-[#e32c66] text-white rounded-md w-full">
                     {t('submit')} →
                   </button>
                 </div>
@@ -135,15 +135,15 @@ const Contact = () => {
               <h2 className="text-2xl font-bold mb-4">{t('alternatively')}</h2>
               <ul className="space-y-4 text-gray-600">
                 <li className="flex items-center space-x-3">
-                  <Mail className="w-5 h-5 text-red-500" />
+                  <Mail className="w-5 h-5 text-[#e32c66]" />
                   <span>info@kolaconsulting.com</span>
                 </li>
                 <li className="flex items-center space-x-3">
-                  <Phone className="w-5 h-5 text-red-500" />
+                  <Phone className="w-5 h-5 text-[#e32c66]" />
                   <span>+237 (0)710 791303</span>
                 </li>
                 <li className="flex items-center space-x-3">
-                  <MapPin className="w-5 h-5 text-red-500" />
+                  <MapPin className="w-5 h-5 text-[#e32c66]" />
                   <span>House of Yatch<br />P.O. Box 12113, Douala-Deido, Cameroon</span>
                 </li>
               </ul>

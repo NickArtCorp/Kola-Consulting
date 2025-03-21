@@ -81,7 +81,7 @@ const ServiceSection = () => {
           initial="hidden"
           animate="visible"
         >
-          {t("my")}<span className="text-red-500  font-sans ml-3">{t("service")}</span>
+          {t("my")}<span className="text-[#e32c66]  font-sans ml-3">{t("service")}</span>
         </motion.h1>
 
 
@@ -112,7 +112,7 @@ const ServiceSection = () => {
             >
               <div className="flex justify-center">
                 <div className="p-3 rounded border border-red-200">
-                  <Folder className="w-6 h-6 text-red-500" />
+                  <Folder className="w-6 h-6 text-[#e32c66]" />
                 </div>
               </div>
               <h3 className="text-center text-lg font-semibold mt-4 font-sans">{t('service1')}</h3>
@@ -137,7 +137,7 @@ const ServiceSection = () => {
             >
               <div className="flex justify-center">
                 <div className="p-3 rounded border border-red-200">
-                  <Camera className="w-6 h-6 text-red-500" />
+                  <Camera className="w-6 h-6 text-[#e32c66]" />
                 </div>
               </div>
               <h3 className="text-center text-lg font-semibold mt-4">{t('service2')}</h3>
@@ -165,7 +165,7 @@ const ServiceSection = () => {
             >
               <div className="flex justify-center">
                 <div className="p-3 rounded border border-red-200">
-                  <Activity className="w-6 h-6 text-red-500" />
+                  <Activity className="w-6 h-6 text-[#e32c66]" />
                 </div>
               </div>
               <h3 className="text-center text-lg font-semibold mt-4">{t('service3')}</h3>
@@ -190,7 +190,7 @@ const ServiceSection = () => {
             >
               <div className="flex justify-center">
                 <div className="p-3 rounded border border-red-200">
-                  <FileSearch className="w-6 h-6 text-red-500" />
+                  <FileSearch className="w-6 h-6 text-[#e32c66]" />
                 </div>
               </div>
               <h3 className="text-center text-lg font-semibold mt-4">{t('service4')}</h3>
@@ -215,7 +215,7 @@ const ServiceSection = () => {
             >
               <div className="flex justify-center">
                 <div className="p-3 rounded border border-red-200">
-                  <Settings className="w-6 h-6 text-red-500" />
+                  <Settings className="w-6 h-6 text-[#e32c66]" />
                 </div>
               </div>
               <h3 className="text-center text-lg font-semibold mt-4">{t('service5')}</h3>
@@ -243,7 +243,7 @@ const ServiceSection = () => {
             >
               <div className="flex justify-center">
                 <div className="p-3 rounded border border-red-200">
-                  <LayoutTemplate className="w-6 h-6 text-red-500" />
+                  <LayoutTemplate className="w-6 h-6 text-[#e32c66]" />
                 </div>
               </div>
               <h3 className="text-center text-lg font-semibold mt-4">{t('service6')}</h3>
@@ -268,7 +268,7 @@ const ServiceSection = () => {
             >
               <div className="flex justify-center">
                 <div className="p-3 rounded border border-red-200">
-                  <Handshake className="w-6 h-6 text-red-500" />
+                  <Handshake className="w-6 h-6 text-[#e32c66]" />
                 </div>
               </div>
               <h3 className="text-center text-lg font-semibold mt-4">{t('service7')}</h3>
