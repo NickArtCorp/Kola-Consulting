@@ -1,7 +1,10 @@
 import Navbar from '../Home/Navbar';
 import Spinner from '../../Spinner';
+import Header_who from './Header_who';
+import { useTranslation } from 'react-i18next';
+import { useState, useEffect } from 'react';
 
-const WhoWeAre = () => {
+const whoWeAre = () => {
    const {t} = useTranslation();
    const [loading, setLoading] = useState(true);
   
@@ -21,8 +24,10 @@ const WhoWeAre = () => {
   return (
     <>
     <Navbar/>
+    <Header_who/>
+    
     </>
   )
 }
 
-export default WhoWeAre;
+export default whoWeAre;
