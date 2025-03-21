@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './Home.jsx';
 import About_us from './About_us.jsx';
 import Realisation from './Realisation.jsx';
-import whoWeAre from './whoWeAre.jsx';
+import WhoWeAre from './Components/About_us/whoWeAre.jsx';
 import Services from './Services.jsx';
 import History from './Components/About_us/History.jsx';
 import Our_Team from './Components/About_us/Our_Team.jsx';
@@ -25,7 +25,7 @@ function App() {
             <Routes>
             <Route path={t('/Kola-consulting')} element={<Home />} />
             <Route path={t('/Kola-consulting/About_us')} element={<About_us />} />
-            <Route path={t('/Kola-consulting/whoWeAre')} element={<whoWeAre />} />
+            <Route path={t('/Kola-consulting/whoWeAre')} element={<WhoWeAre />} />
             <Route path={t('/Kola-consulting/Services')} element={<Services />} />
             <Route path={t('/Kola-consulting/Realisation')} element={<Realisation />} />
             <Route path={t('/Kola-consulting/History')} element={<History />} />
