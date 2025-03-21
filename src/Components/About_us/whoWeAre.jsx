@@ -1,6 +1,8 @@
 import Navbar from '../Home/Navbar';
+import Spinner from '../../Spinner';
 
 const WhoWeAre = () => {
+   const {t} = useTranslation();
    const [loading, setLoading] = useState(true);
   
     useEffect(() => {
@@ -15,10 +17,12 @@ const WhoWeAre = () => {
     if (loading) {
       return <Spinner />;
     }
-    
+
   return (
-    <div><Navbar/></div>
+    <>
+    <Navbar/>
+    </>
   )
 }
 
-export default WhoWeAre
+export default WhoWeAre;
