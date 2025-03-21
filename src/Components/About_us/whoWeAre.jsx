@@ -1,6 +1,6 @@
 import Navbar from '../Home/Navbar';
 import Spinner from '../../Spinner';
-import Header_who from './Header_who';
+import Header_who from './header_who';
 import { useTranslation } from 'react-i18next';
 import { useState, useEffect } from 'react';
 
