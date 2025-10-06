@@ -28,3 +28,30 @@ export default {
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+# Project Setup Instructions
+
+## Prerequisites
+1. Install Node.js (Latest LTS version recommended)
+2. Install Git (for version control)
+
+## Installation Steps
+1. Clone the repository:
+```bash
+git clone <your-repository-url>
+```
+
+2. Navigate to project directory:
+```bash
+cd <project-directory>
+```
+
+3. Install dependencies:
+```bash
+npm install
+```
+
+4. Start the project:
+```bash
+npm start
+```

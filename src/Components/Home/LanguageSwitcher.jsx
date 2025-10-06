@@ -13,7 +13,6 @@ const LanguageSwitcher = () => {
     { code: 'es', label: 'Español', flag: '🇪🇸' },
     { code: 'de', label: 'Deutsch', flag: '🇩🇪' },
     { code: 'it', label: 'Italiano', flag: '🇮🇹' },
-    { code: 'ml', label: 'Marine', flag: '🇲🇱' },
   ];
 
   const getCurrentLanguageLabel = () => {

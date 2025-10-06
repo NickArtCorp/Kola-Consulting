@@ -107,7 +107,7 @@ const Navbar = () => {
                                                         </span>
                                                     </a>
                                                 </li>
-
+                                                     {/* 
                                                 <li>
                                                     <a href="/Kola-consulting/Our_Code_Of_Ethics" className="block px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 group">
                                                         <span className="relative text-gray-900 dark:text-white group-hover:text-[#e32c66] transition-all duration-300">
@@ -116,6 +116,7 @@ const Navbar = () => {
                                                         </span>
                                                     </a>
                                                 </li>
+                                                      */}
 
                                                 <li>
                                                     <a href="/Kola-consulting/Contact" className="block px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 group">
@@ -139,25 +140,10 @@ const Navbar = () => {
                             </li>
 
                             {/* Search Bar */}
-                            <li className="hidden md:block">
-                                <div className="relative">
-                                    <input
-                                        type="text"
-                                        className={`search-transition w-40 focus:w-60 px-4 py-2 pr-8 rounded-full border border-gray-300 dark:border-gray-600 focus:border-[#C34C5B] dark:focus:border-[#C34C5B] focus:ring-2 focus:ring-[#C34C5B]/20 focus:outline-none dark:bg-gray-700 dark:text-gray-100 transition-all duration-300`}
-                                        placeholder={t('search')}
-                                        onFocus={() => setIsSearchFocused(true)}
-                                        onBlur={() => setIsSearchFocused(false)}
-                                    />
-                                    <button className="absolute right-3 top-2.5 text-gray-400 dark:text-gray-300 hover:text-[#e32c66] dark:hover:text-[#e32c66]">
-                                        <Search className="h-5 w-5" />
-                                    </button>
-                                </div>
-                            </li>
+                           
 
-                            {/* Theme Toggle */}
-                            <li className="flex items-center">
-                                <DarkThemeToggle className="focus:ring-[#e32c66]" />
-                            </li>
+                            {/*Theme Toggle */}
+                            
 
                             {/* Language Switcher */}
                             <li className="flex items-center">

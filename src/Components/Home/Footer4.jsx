@@ -18,6 +18,7 @@ const Footer4 = (props) => {
             <div className="footer4-container">
               <span className="thq-body-small">© 2025 Kola Consulting</span>
             </div>
+            {/* 
             <div className="footer4-footer-links">
               <span className="footer4-text11 thq-body-small">
                 {props.privacyLink ?? (
@@ -41,6 +42,7 @@ const Footer4 = (props) => {
                 )}
               </span>
             </div>
+            */}
           </div>
         </div>
       </div>

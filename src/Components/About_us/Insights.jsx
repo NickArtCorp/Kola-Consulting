@@ -3,8 +3,10 @@ import { Lightbulb, Settings, Rocket, Users } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from '../Home/Navbar';
 import Spinner from '../../Spinner';
+import Foooter from '../Home/Footer4';
 import '../../home.css';
 import { useTranslation } from 'react-i18next';
+import Footer4 from '../Home/Footer4';
 
 const Insights = () => {
   const {t} = useTranslation();
@@ -26,23 +28,23 @@ const Insights = () => {
   const methodologyCards = [
     {
       icon: <Settings className="w-12 h-12 text-blue-500 cursor-pointer font-sans" />,
-      title: t('methodology1'),
-      description: t('methodology1Text')
+      title: t('research'),
+      description: t("researchText")
     },
     {
       icon: <Rocket className="w-12 h-12 text-green-500 cursor-pointer" />,
-      title: t('methodology2'),
-      description: t('methodology2Text')
+      title: t('ideation'),
+      description: t('ideationText')
     },
     {
       icon: <Lightbulb className="w-12 h-12 text-red-500 cursor-pointer" />,
-      title: t('methodology3'),
-      description: t('methodology3Text')
+      title: t('creation'),
+      description: t('creationText')
     },
     {
       icon: <Users className="w-12 h-12 text-amber-700 cursor-pointer" />,
-      title: t('methodology4'),
-      description: t('methodology4Text')
+      title: t('implementation'),
+      description: t('implementationText')
     }
   ];
 
@@ -237,8 +239,8 @@ const Insights = () => {
       transition={{ duration: 0.8 }}
     >
       <p className="text-lg text-gray-700 leading-relaxed">
-        Notre <span className="font-bold text-red-500">expertise</span>, notre <span className="font-bold text-blue-500">dévouement</span>, notre <span className="font-bold text-green-500">transparence</span> dans l’exécution de vos projets et notre
-        <span className="font-bold text-yellow-500"> flexibilité</span> à nous adapter à vos besoins, nous donnent les meilleurs atouts pour vous accompagner dans le renforcement du lien avec vos publics cibles et l’atteinte de vos objectifs.
+        {t("our")}<span className="font-bold text-red-500">{t("expertise")}</span>, {t("ourrr")} <span className="font-bold text-blue-500">{t("dedication")}</span>, {t("ourrr")} <span className="font-bold text-green-500">{t("transparency")}</span> {t("inthe")}
+        <span className="font-bold text-yellow-500"> {t("flexibility")}</span> {t("to_adapt")}
       </p>
     </motion.div>
 
@@ -253,6 +255,7 @@ const Insights = () => {
     >
      
     </motion.div>
+    <Foooter/>
   </>
 )}
 </AnimatePresence>

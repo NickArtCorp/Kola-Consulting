@@ -14,11 +14,11 @@ const CTA26 = (props) => {
   }
 
   return (
-    <div className="thq-section-padding font-sans " id='ready'>
-      <div className="thq-section-max-width">
-        <div className="cta26-accent2-bg">
-          <div className="cta26-accent1-bg">
-            <div className="cta26-container2">
+    <div className="thq-section-padding font-sans hover:text-white" id='ready'>
+      <div className="thq-section-max-width hover:text-white">
+        <div className="cta26-accent2-bg hover:text-white">
+          <div className="cta26-accent1-bg hover:text-white">
+            <div className="cta26-container2 hover:text-white">
               <div className="cta26-content">
                 <span className="thq-heading-2">
                   {props.heading1 ?? (
@@ -77,3 +77,6 @@ CTA26.propTypes = {
 }
 
 export default CTA26
+
+
+

@@ -220,12 +220,9 @@ html {
     font-family: var(--font-sans);
     font-weight: 500;
     line-height: 1.7;
-    color:rgb(8, 3, 3);
+    color: black;
   }
 
-  .thq-body-large:hover{
-    fill: var(--dl-color-theme-secondary2);
-  }
    
   .thq-body-small {
     font-size: 16px;
@@ -251,9 +248,14 @@ html {
     flex-direction: column;
   }
    
+   
   .thq-section-max-width {
     width: 100%;
     max-width: var(--dl-size-size-maxwidth);
+  }
+
+  .thq-section-max-width:hover {
+    background-color: var(--dl-color-theme-neutral-light);
   }
    
   .thq-img-ratio-1-1 {

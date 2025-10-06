@@ -81,7 +81,7 @@ const ServiceSection = () => {
           initial="hidden"
           animate="visible"
         >
-          {t("my")}<span className="text-[#e32c66]  font-sans ml-3">{t("service")}</span>
+          {t("OUR")}<span className="text-[#e32c66]  font-sans ml-3">{t("service")}</span>
         </motion.h1>
 
 
@@ -102,10 +102,10 @@ const ServiceSection = () => {
                   t('service1'),
                   "",
                   [
-                    "Gestion administrative quotidienne des projets",
-                    "Organisation et suivi des réunions",
-                    "Rédaction et archivage des documents",
-                    "Coordination avec les différentes parties prenantes"
+                    t('service1_subtext1'),
+                    t('service1_subtext2'),
+                    t('service1_subtext3'),
+                    t('service1_subtext4'),
                   ]
                 )
               }

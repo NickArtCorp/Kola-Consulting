@@ -2,6 +2,7 @@ import { useState, useEffect }  from 'react';
 import Navbar from './Components/Home/Navbar';
 import ServiceSection from './Components/Home/ServiceSection';
 import Spinner from './Spinner';
+import Footer from './Components/Home/Footer4';
 
 
 const Services = () => {
@@ -26,6 +27,7 @@ const Services = () => {
     <main className='font-sans'>
       <Navbar/>
       <ServiceSection/>
+      <Footer/>
     </main>
 
   );

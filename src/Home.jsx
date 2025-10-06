@@ -10,6 +10,7 @@ import Steps2 from "./Components/Home/Steps2";
 import Realisation_mini from "./Components/Home/Realisation_mini";
 import './style.css';
 import './home.css';
+import './Components/Home/cta26.css';
 import { useTranslation } from "react-i18next";
 
 function Home() {
@@ -93,59 +94,6 @@ function Home() {
           </Fragment>
         }
       ></CTA26>
-
-      <Steps2
-        step1Description={
-          <Fragment>
-            <span className="home-text186 font-sans">
-              {t("researchText")}
-            </span>
-          </Fragment>
-        }
-        step3Description={
-          <Fragment>
-            <span className="home-text187 font-sans">
-              {t("creationText")}
-            </span>
-          </Fragment>
-        }
-        step2Title={
-          <Fragment>
-            <span className="home-text188 font-sans">
-              {t("ideation")}
-            </span>
-          </Fragment>
-        }
-        step2Description={
-          <Fragment>
-            <span className="home-text189 font-sans">
-              {t("ideationText")}
-            </span>
-          </Fragment>
-        }
-        step1Title={
-          <Fragment>
-            <span className="home-text190 font-sans">{t("research")}</span>
-          </Fragment>
-        }
-        step3Title={
-          <Fragment>
-            <span className="home-text191 font-sans">{t("creation")}</span>
-          </Fragment>
-        }
-        step4Description={
-          <Fragment>
-            <span className="home-text192 font-sans">
-              {t("implementationText")}
-            </span>
-          </Fragment>
-        }
-        step4Title={
-          <Fragment>
-            <span className="home-text193 font-sans">{t("implementation")}</span>
-          </Fragment>
-        }
-      ></Steps2>
 
       <Realisation_mini className="font-sans " />
 

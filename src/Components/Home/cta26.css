@@ -25,6 +25,9 @@
   transform-style: preserve-3d;
   background-color: var(--dl-color-theme-accent1);
 }
+.cta26-accent1-bg:hover{
+  color: white;
+}
  
 .cta26-container2 {
   gap: var(--dl-space-space-threeunits);
@@ -41,8 +44,12 @@
 }
  
 .cta26-container2:hover {
-  color: var(--dl-color-theme-neutral-light);
   background-color: var(--dl-color-theme-neutral-dark);
+  color: var(--dl-color-theme-accent1)
+}
+ 
+.cta26-container2:hover .cta26-text5 .thq-heading-2 .home-text125{
+  color: white;
 }
  
 .cta26-content {
@@ -50,6 +57,10 @@
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+}
+
+.cta26-content:hover{
+  
 }
  
 .cta26-actions {
@@ -66,10 +77,12 @@
  
 .cta26-text5 {
   display: inline-block;
+  
 }
 
 .cta26-text5:hover{
   display: inline-block;
+  color: white
 }
  
 .cta26-text6 {
