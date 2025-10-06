@@ -16,9 +16,12 @@ import { useTranslation } from 'react-i18next';
 
 function App() {
   const { t } = useTranslation();
+  const REPO_NAME = '/Kola_Consulting'; 
+
   return (
     <DropdownProvider>
     <ThemeProvider>
+       <BrowserRouter basename={REPO_NAME}> 
       <Router>
         <main className="flex min-h-screen items-center justify-center gap-2 bg-gray-100 dark:bg-gray-800 font-sans">
           
@@ -36,8 +39,10 @@ function App() {
             </Routes>
         </main>
       </Router>
+       </BrowserRouter > 
     </ThemeProvider>
     </DropdownProvider>
+
   );
 }
 
