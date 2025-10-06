@@ -1,24 +1,27 @@
-# Logs
-logs
-*.log
+# Dépendances
+/node_modules
+/dist
+/build
+/out
+
+# Fichiers de log et de cache
 npm-debug.log*
 yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+.eslintcache
+.cache
 
-node_modules
-dist
-dist-ssr
-*.local
+# Fichiers environnement
+.env
+.env.local
+.env.*.local
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# Fichiers locaux/OS
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+Thumbs.db
+
+# Fichiers de configuration VS Code spécifiques à l'utilisateur
+.vscode/*.local
+
+# Configurations IDE
+.idea
+*.iml
