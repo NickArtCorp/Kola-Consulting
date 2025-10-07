@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: process.env.VITE_BASE_PATH || '/Kola_Consulting/',
+  base: process.env.VITE_BASE_PATH || '/Kola-Consulting/',
   esbuild: {
     jsxInject: `import React from 'react'`,
   },
