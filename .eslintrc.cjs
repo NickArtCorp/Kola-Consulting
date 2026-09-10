@@ -3,7 +3,8 @@ module.exports = {
   env: { 
     jest: true,
     browser: true, 
-    es2020: true 
+    es2020: true,
+    node: true
   },
   extends: [
     "eslint:recommended",
@@ -26,5 +27,6 @@ module.exports = {
       "warn",
       { allowConstantExport: true },
     ],
+    "@typescript-eslint/no-var-requires": "off",
   },
 };

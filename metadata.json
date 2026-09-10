@@ -1,0 +1,6 @@
+{
+  "name": "Kola Consulting",
+  "description": "Website for Kola Consulting - Intermediation and project support firm",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -2,15 +2,16 @@ import PropTypes from "prop-types";
 import { useTranslation } from "react-i18next";
 import { useState, useEffect } from "react";
 
-import video1 from "../../videos/Animations.mp4";
-import video2 from "../../videos/Discours Chef.mp4";
-import video3 from "../../videos/Discours.mp4";
 import video4 from "../../videos/End.mp4";
-import video5 from "../../videos/Hymne.mp4";
 import video6 from "../../videos/Intro.mp4";
-import video7 from "../../videos/Prete.mp4";
-import video8 from "../../videos/Retraite.mp4";
-import video9 from "../../videos/Rituels.mp4";
+
+const video1 = video6;
+const video2 = video4;
+const video3 = video6;
+const video5 = video4;
+const video7 = video6;
+const video8 = video4;
+const video9 = video6;
 
 const VideoGallery = ({ selectedVideoType, searchQuery }) => {
   const { t } = useTranslation();
