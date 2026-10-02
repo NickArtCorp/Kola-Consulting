@@ -5,16 +5,11 @@ import Navbar from './Components/Home/Navbar';
 
 
 const About_us = () => {
-
   return (
-
-    <main>
-      <Navbar/>
-      <OurTeam/>
-    </main>
-
+    <div className="w-full">
+      <OurTeam />
+    </div>
   );
-
 };
 
 

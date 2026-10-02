@@ -4,7 +4,20 @@ import PropTypes from 'prop-types'
 
 import './features24.css'
 
-const Features24 = (props) => {
+const Features24 = ({
+  feature1ImgAlt = 'Professional advice',
+  feature1ImgSrc = 'https://images.unsplash.com/photo-1703628144084-fc922246a486?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTMyMXwwfDF8cmFuZG9tfHx8fHx8fHx8MTczNjc4MzM2NHw&ixlib=rb-4.0.3&q=80&w=1080',
+  feature2ImgAlt = 'Expert guidance',
+  feature2ImgSrc = 'https://images.unsplash.com/photo-1507206130118-b5907f817163?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTMyMXwwfDF8cmFuZG9tfHx8fHx8fHx8MTczNjc4MzM2NHw&ixlib=rb-4.0.3&q=80&w=1080',
+  feature3ImgAlt = 'Customized solutions',
+  feature3ImgSrc = 'https://images.unsplash.com/photo-1579017308347-e53e0d2fc5e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTMyMXwwfDF8cmFuZG9tfHx8fHx8fHx8MTczNjc4MzM2MXw&ixlib=rb-4.0.3&q=80&w=1080',
+  feature1Title,
+  feature1Description,
+  feature2Title,
+  feature2Description,
+  feature3Title,
+  feature3Description,
+}) => {
   const [activeTab, setActiveTab] = useState(0)
   return (
     <div className="thq-section-padding font-sans">
@@ -12,22 +25,22 @@ const Features24 = (props) => {
         <div className="features24-image-container">
           {activeTab === 0 && (
             <img
-              alt={props.feature1ImgAlt}
-              src={props.feature1ImgSrc}
+              alt={feature1ImgAlt}
+              src={feature1ImgSrc}
               className="features24-image1 thq-img-ratio-16-9"
             />
           )}
           {activeTab === 1 && (
             <img
-              alt={props.feature2ImgAlt}
-              src={props.feature2ImgSrc}
+              alt={feature2ImgAlt}
+              src={feature2ImgSrc}
               className="features24-image2 thq-img-ratio-16-9"
             />
           )}
           {activeTab === 2 && (
             <img
-              alt={props.feature3ImgAlt}
-              src={props.feature3ImgSrc}
+              alt={feature3ImgAlt}
+              src={feature3ImgSrc}
               className="features24-image3 thq-img-ratio-16-9"
             />
           )}
@@ -42,7 +55,7 @@ const Features24 = (props) => {
             </div>
             <div className="features24-content1">
               <h2 className="thq-heading-2">
-                {props.feature1Title ?? (
+                {feature1Title ?? (
                   <Fragment>
                     <span className="features24-text4">
                       Professional Advice
@@ -51,7 +64,7 @@ const Features24 = (props) => {
                 )}
               </h2>
               <span className="thq-body-small">
-                {props.feature1Description ?? (
+                {feature1Description ?? (
                   <Fragment>
                     <span className="features24-text5">
                       Expert advice from experienced consultants
@@ -70,14 +83,14 @@ const Features24 = (props) => {
             </div>
             <div className="features24-content2">
               <h2 className="thq-heading-2">
-                {props.feature2Title ?? (
+                {feature2Title ?? (
                   <Fragment>
                     <span className="features24-text6">Goal Achievement</span>
                   </Fragment>
                 )}
               </h2>
               <span className="thq-body-small">
-                {props.feature2Description ?? (
+                {feature2Description ?? (
                   <Fragment>
                     <span className="features24-text3">
                       Expert guidance to achieve goals
@@ -96,7 +109,7 @@ const Features24 = (props) => {
             </div>
             <div className="features24-content3">
               <h2 className="thq-heading-2">
-                {props.feature3Title ?? (
+                {feature3Title ?? (
                   <Fragment>
                     <span className="features24-text2">
                       Customized Solutions
@@ -105,7 +118,7 @@ const Features24 = (props) => {
                 )}
               </h2>
               <span className="thq-body-small">
-                {props.feature3Description ?? (
+                {feature3Description ?? (
                   <Fragment>
                     <span className="features24-text1">
                       Tailored strategies for each business
@@ -119,24 +132,6 @@ const Features24 = (props) => {
       </div>
     </div>
   )
-}
-
-Features24.defaultProps = {
-  feature1ImgAlt: 'Professional advice',
-  feature3Description: undefined,
-  feature3Title: undefined,
-  feature3ImgSrc:
-    'https://images.unsplash.com/photo-1579017308347-e53e0d2fc5e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTMyMXwwfDF8cmFuZG9tfHx8fHx8fHx8MTczNjc4MzM2MXw&ixlib=rb-4.0.3&q=80&w=1080',
-  feature1ImgSrc:
-    'https://images.unsplash.com/photo-1703628144084-fc922246a486?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTMyMXwwfDF8cmFuZG9tfHx8fHx8fHx8MTczNjc4MzM2NHw&ixlib=rb-4.0.3&q=80&w=1080',
-  feature2Description: undefined,
-  feature1Title: undefined,
-  feature3ImgAlt: 'Customized solutions',
-  feature1Description: undefined,
-  feature2ImgSrc:
-    'https://images.unsplash.com/photo-1507206130118-b5907f817163?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTMyMXwwfDF8cmFuZG9tfHx8fHx8fHx8MTczNjc4MzM2NHw&ixlib=rb-4.0.3&q=80&w=1080',
-  feature2ImgAlt: 'Expert guidance',
-  feature2Title: undefined,
 }
 
 Features24.propTypes = {

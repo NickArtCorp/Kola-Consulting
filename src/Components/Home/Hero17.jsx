@@ -1,11 +1,9 @@
-import { Fragment } from 'react'
-
-import Script from 'dangerous-html/react'
-import PropTypes from 'prop-types'
-
-import './hero17.css'
-import { useTranslation } from 'react-i18next'
-import { useNavigate } from 'react-router-dom'
+import { Fragment } from 'react';
+import PropTypes from 'prop-types';
+import { motion, useReducedMotion } from 'framer-motion';
+import { ArrowRight, Compass, Sparkles } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import './hero17.css';
 
 import img1 from '../../Images/Hero_Images/photo_1.jpg';
 import img2 from '../../Images/Hero_Images/photo_2.jpg';
@@ -28,181 +26,214 @@ import img18 from '../../Images/Hero_Images/photo_18.jpg';
 import img19 from '../../Images/Hero_Images/photo_19.jpg';
 import img20 from '../../Images/Hero_Images/photo_20.jpg';
 
-const Hero17 = (props) => {
-  const { t } = useTranslation('translation')
-  const navigate = useNavigate()
-  const handleGetStarted = () => {
-    navigate('#ready')
-  }
-  const handleLearnMore = () => {
-    navigate('#discover')
-  }
+const Hero17 = ({
+  heading1,
+  content1,
+  action1,
+  action2,
+  image1Src = img1,
+  image2Src = img2,
+  image3Src = img3,
+  image4Src = img4,
+  image5Src = img5,
+  image6Src = img6,
+  image7Src = img7,
+  image8Src = img8,
+  image9Src = img9,
+  image10Src = img10,
+  image11Src = img11,
+  image12Src = img12,
+  image13Src = img13,
+  image14Src = img14,
+  image15Src = img15,
+  image16Src = img16,
+  image17Src = img17,
+  image18Src = img18,
+  image19Src = img19,
+  image20Src = img20,
+  image1Alt = 'Projet Kola Consulting',
+  image2Alt = 'Projet Kola Consulting',
+  image3Alt = 'Projet Kola Consulting',
+  image4Alt = 'Projet Kola Consulting',
+  image5Alt = 'Projet Kola Consulting',
+  image6Alt = 'Projet Kola Consulting',
+  image7Alt = 'Projet Kola Consulting',
+  image8Alt = 'Projet Kola Consulting',
+  image9Alt = 'Projet Kola Consulting',
+  image10Alt = 'Projet Kola Consulting',
+  image11Alt = 'Projet Kola Consulting',
+  image12Alt = 'Projet Kola Consulting',
+  image13Alt = 'Projet Kola Consulting',
+  image14Alt = 'Projet Kola Consulting',
+  image15Alt = 'Projet Kola Consulting',
+  image16Alt = 'Projet Kola Consulting',
+  image17Alt = 'Projet Kola Consulting',
+  image18Alt = 'Projet Kola Consulting',
+  image19Alt = 'Projet Kola Consulting',
+  image20Alt = 'Projet Kola Consulting',
+}) => {
+  const { t } = useTranslation('translation');
+  const shouldReduceMotion = useReducedMotion();
 
-  // Define your unique set of images (20 images in this case)
+  const handleGetStarted = (e) => {
+    e?.preventDefault?.();
+    const target = document.getElementById('ready');
+    if (target) {
+      const navOffset = 85;
+      const targetY = target.getBoundingClientRect().top + window.pageYOffset - navOffset;
+      window.scrollTo({ top: targetY, behavior: 'smooth' });
+    }
+  };
+
+  const handleLearnMore = (e) => {
+    e?.preventDefault?.();
+    const target = document.getElementById('discover');
+    if (target) {
+      const navOffset = 85;
+      const targetY = target.getBoundingClientRect().top + window.pageYOffset - navOffset;
+      window.scrollTo({ top: targetY, behavior: 'smooth' });
+    }
+  };
+
+  // 20 representative curated images from Kola Consulting's portfolio
   const uniqueImages = [
-    { src: props.image1Src, alt: props.image1Alt, className: 'hero17-placeholder-image10' },
-    { src: props.image2Src, alt: props.image2Alt, className: 'hero17-placeholder-image11' },
-    { src: props.image3Src, alt: props.image3Alt, className: 'hero17-placeholder-image12' },
-    { src: props.image4Src, alt: props.image4Alt, className: 'hero17-placeholder-image13' },
-    { src: props.image5Src, alt: props.image5Alt, className: 'hero17-placeholder-image14' },
-    { src: props.image6Src, alt: props.image6Alt, className: 'hero17-placeholder-image15' },
-    { src: props.image7Src, alt: props.image7Alt, className: 'hero17-placeholder-image16' },
-    { src: props.image8Src, alt: props.image8Alt, className: 'hero17-placeholder-image17' },
-    { src: props.image9Src, alt: props.image9Alt, className: 'hero17-placeholder-image18' },
-    { src: props.image10Src, alt: props.image10Alt, className: 'hero17-placeholder-image19' },
-    { src: props.image11Src, alt: props.image11Alt, className: 'hero17-placeholder-image20' },
-    { src: props.image12Src, alt: props.image12Alt, className: 'hero17-placeholder-image10' }, // These appear to be duplicates of earlier images, keep as is
-    { src: props.image13Src, alt: props.image13Alt, className: 'hero17-placeholder-image11' },
-    { src: props.image14Src, alt: props.image14Alt, className: 'hero17-placeholder-image12' },
-    { src: props.image15Src, alt: props.image15Alt, className: 'hero17-placeholder-image13' },
-    { src: props.image16Src, alt: props.image16Alt, className: 'hero17-placeholder-image14' },
-    { src: props.image17Src, alt: props.image17Alt, className: 'hero17-placeholder-image15' },
-    { src: props.image18Src, alt: props.image18Alt, className: 'hero17-placeholder-image16' },
-    { src: props.image19Src, alt: props.image19Alt, className: 'hero17-placeholder-image17' },
-    { src: props.image20Src, alt: props.image20Alt, className: 'hero17-placeholder-image18' },
+    { src: image1Src, alt: image1Alt },
+    { src: image2Src, alt: image2Alt },
+    { src: image3Src, alt: image3Alt },
+    { src: image4Src, alt: image4Alt },
+    { src: image5Src, alt: image5Alt },
+    { src: image6Src, alt: image6Alt },
+    { src: image7Src, alt: image7Alt },
+    { src: image8Src, alt: image8Alt },
+    { src: image9Src, alt: image9Alt },
+    { src: image10Src, alt: image10Alt },
+    { src: image11Src, alt: image11Alt },
+    { src: image12Src, alt: image12Alt },
+    { src: image13Src, alt: image13Alt },
+    { src: image14Src, alt: image14Alt },
+    { src: image15Src, alt: image15Alt },
+    { src: image16Src, alt: image16Alt },
+    { src: image17Src, alt: image17Alt },
+    { src: image18Src, alt: image18Alt },
+    { src: image19Src, alt: image19Alt },
+    { src: image20Src, alt: image20Alt },
   ];
 
-  // Concatenate two full sets of the unique images. This effectively doubles the content.
+  // Concatenate for seamless continuous 50% translation infinite loop
   const imagesToDisplay = [...uniqueImages, ...uniqueImages];
 
   return (
-    <div className="hero17-header78 font-sans">
-      <div className="hero17-column thq-section-padding thq-section-max-width">
-        <div className="hero17-content1 font-sans">
-          <h1 className="hero17-text1 thq-heading-1">
-            {props.heading1 ?? (
-              <Fragment>
-                <span className="hero17-text7 font-sans ">{t('welcome')}</span>
-              </Fragment>
-            )}
-          </h1>
-          <p className="hero17-text2 thq-body-large">
-            {props.content1 ?? (
-              <Fragment>
-                <span className="hero17-text8 font-sans font-semibold text-gray-600">
-                  {t("empower")}
-                </span>
-              </Fragment>
-            )}
-          </p>
-        </div>
-        <div className="hero17-actions">
-          <button className="thq-button-filled hero17-button1 hover:border-none" onClick={handleGetStarted}>
-            <span className="thq-body-small">
-              {props.action1 ?? <span className="hero17-text6 ">Get Started</span>}
-            </span>
-          </button>
-          <button className="thq-button-outline hero17-button2" onClick={handleLearnMore}>
-            <span className="thq-body-small">
-              {props.action2 ?? <span className="hero17-text5">Learn More</span>}
-            </span>
-          </button>
-        </div>
+    <section className="relative w-full overflow-hidden pt-8 pb-16 font-sans">
+      {/* Subtle background ambient glow (subtle, matching brand colors) */}
+      <div 
+        aria-hidden="true" 
+        className="pointer-events-none absolute inset-x-0 -top-20 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-32"
+      >
+        <div 
+          className="relative left-[calc(50%-18rem)] aspect-[1155/678] w-[42rem] -translate-x-1/2 rotate-[25deg] bg-gradient-to-tr from-[#e32c66]/15 to-[#1e3a8a]/10 opacity-70 sm:left-[calc(50%-25rem)] sm:w-[68rem]"
+        />
       </div>
-      <div className="hero17-content2">
-        <div className="hero17-row-container1 thq-animated-group-container-horizontal thq-mask-image-horizontal">
-          <div
-            className="thq-animated-group-horizontal animate-hero17-scroll"
-            // The animationDuration should be relative to the length of uniqueImages
-            // A higher number means slower scroll. Adjust as needed.
-            style={{ animationDuration: '60s', whiteSpace: 'nowrap', display: 'flex' }}
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+        {/* Cinematic Eyebrow Pill */}
+        <motion.div
+          initial={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: -12 }}
+          animate={shouldReduceMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gray-200 dark:border-gray-700/80 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md shadow-xs mb-6 text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300"
+        >
+          <span className="flex h-2 w-2 relative">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#e32c66] opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-[#e32c66]"></span>
+          </span>
+          <span>{t('cabinet') || "Cabinet d’intermédiation et d’accompagnement de projets"}</span>
+          <Sparkles className="w-3.5 h-3.5 text-[#e32c66]" />
+        </motion.div>
+
+        {/* Hero Title with Subtle Cinematic Entrance */}
+        <motion.h1
+          initial={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: 22 }}
+          animate={shouldReduceMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900 dark:text-white max-w-4xl leading-[1.15]"
+        >
+          {heading1 ?? (
+            <span className="font-sans">{t('welcome')}</span>
+          )}
+        </motion.h1>
+
+        {/* Hero Description */}
+        <motion.p
+          initial={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: 18 }}
+          animate={shouldReduceMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.22, ease: [0.16, 1, 0.3, 1] }}
+          className="mt-6 text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl font-normal leading-relaxed"
+        >
+          {content1 ?? (
+            <span className="font-sans">{t('empower')}</span>
+          )}
+        </motion.p>
+
+        {/* Action Buttons with Interactive Micro-states */}
+        <motion.div
+          initial={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: 16 }}
+          animate={shouldReduceMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.32, ease: [0.16, 1, 0.3, 1] }}
+          className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center gap-3.5 sm:gap-4 w-full sm:w-auto"
+        >
+          {/* Primary Button */}
+          <motion.button
+            whileHover={shouldReduceMotion ? {} : { scale: 1.025, y: -2 }}
+            whileTap={shouldReduceMotion ? {} : { scale: 0.98 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 25 }}
+            onClick={handleGetStarted}
+            className="group relative inline-flex items-center justify-center gap-2.5 w-full sm:w-auto px-7 py-3.5 text-sm md:text-base font-semibold text-white bg-gradient-to-r from-[#e32c66] to-[#C34C5B] rounded-full shadow-md hover:shadow-lg hover:shadow-[#e32c66]/25 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#e32c66]"
           >
-            {imagesToDisplay.map((img, index) => (
+            <span>{action1 ?? t('getStarted')}</span>
+            <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+          </motion.button>
+
+          {/* Secondary Button */}
+          <motion.button
+            whileHover={shouldReduceMotion ? {} : { scale: 1.025, y: -2 }}
+            whileTap={shouldReduceMotion ? {} : { scale: 0.98 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 25 }}
+            onClick={handleLearnMore}
+            className="group inline-flex items-center justify-center gap-2 w-full sm:w-auto px-7 py-3.5 text-sm md:text-base font-semibold text-gray-700 dark:text-gray-200 bg-white/90 dark:bg-gray-800/90 border border-gray-300 dark:border-gray-700 rounded-full hover:bg-gray-50 dark:hover:bg-gray-750 hover:border-gray-400 dark:hover:border-gray-600 shadow-xs transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#e32c66]"
+          >
+            <Compass className="w-4 h-4 text-gray-500 dark:text-gray-400 group-hover:text-[#e32c66] transition-colors" />
+            <span>{action2 ?? t('learnMore')}</span>
+          </motion.button>
+        </motion.div>
+      </div>
+
+      {/* 60fps Infinite Cinematic Marquee with Pause on Hover and Gradient Edge Masks */}
+      <motion.div
+        initial={shouldReduceMotion ? { opacity: 0 } : { opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.9, delay: 0.45 }}
+        className="mt-14 sm:mt-16 w-full hero-marquee-viewport"
+      >
+        <div className="hero-marquee-track py-2">
+          {imagesToDisplay.map((img, index) => (
+            <div
+              key={`${img.src}-${index}`}
+              className="group relative flex-shrink-0 mx-2.5 sm:mx-3.5 w-60 h-60 sm:w-72 sm:h-72 rounded-2xl overflow-hidden bg-gray-100 dark:bg-gray-800 shadow-xs hover:shadow-xl transition-all duration-500 border border-black/5 dark:border-white/10"
+            >
               <img
-                key={index} // Using index as key is fine here since the array is static and items are identical
                 src={img.src}
-                alt={img.alt}
-                className={`${img.className} thq-img-scale thq-img-ratio-1-1`}
-                style={{ display: 'inline-block', margin: 0, padding: 0 }}
+                alt={img.alt || `Kola Consulting projet ${index + 1}`}
+                loading={index > 4 ? "lazy" : "eager"}
+                decoding="async"
+                className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
               />
-            ))}
-          </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+            </div>
+          ))}
         </div>
-      </div>
-      <div>
-        <div className="hero17-container2">
-          <Script
-            html={`<style>
-  /* Define the keyframes for the continuous scroll */
-  @keyframes hero17-scroll {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      /* This is the key: translate by 50% of the container's width.
-         Since the container holds two identical sets, moving 50%
-         makes the second set perfectly align where the first started. */
-      transform: translateX(-50%);
-    }
-  }
-
-  /* Apply the animation properties */
-  .animate-hero17-scroll {
-    animation-timing-function: linear; /* Ensures constant speed, no acceleration/deceleration */
-    animation-iteration-count: infinite; /* Makes the animation loop forever */
-    animation-name: hero17-scroll;
-    /* animation-fill-mode: forwards; is not needed for infinite loops and can sometimes cause flicker */
-  }
-
-  /* Critical for this technique: ensure the animated container spans the full width of its content */
-  .thq-animated-group-horizontal {
-      width: fit-content; /* Allows the div to be as wide as its combined image content */
-  }
-</style>`}
-          />
-        </div>
-      </div>
-    </div>
+      </motion.div>
+    </section>
   );
-};
-
-Hero17.defaultProps = {
-  image1Src: img1,
-  image2Src: img2,
-  image3Src: img3,
-  image4Src: img4,
-  image5Src: img5,
-  image6Src: img6,
-  image7Src: img7,
-  image8Src: img8,
-  image9Src: img9,
-  image10Src: img10,
-  image11Src: img11,
-  image12Src: img12,
-  image13Src: img13,
-  image14Src: img14,
-  image15Src: img15,
-  image16Src: img16,
-  image17Src: img17,
-  image18Src: img18,
-  image19Src: img19,
-  image20Src: img20,
-
-  image1Alt: 'Hero Image',
-  image2Alt: 'Hero Image',
-  image3Alt: 'Hero Image',
-  image4Alt: 'Hero Image',
-  image5Alt: 'Hero Image',
-  image6Alt: 'Hero Image',
-  image7Alt: 'Hero Image',
-  image8Alt: 'Hero Image',
-  image9Alt: 'Hero Image',
-  image10Alt: 'Hero Image',
-  image11Alt: 'Hero Image',
-  image12Alt: 'Hero Image',
-  image13Alt: 'Hero Image',
-  image14Alt: 'Hero Image',
-  image15Alt: 'Hero Image',
-  image16Alt: 'Hero Image',
-  image17Alt: 'Hero Image',
-  image18Alt: 'Hero Image',
-  image19Alt: 'Hero Image',
-  image20Alt: 'Hero Image',
-
-  action2: undefined,
-  action1: undefined,
-  heading1: undefined,
-  content1: undefined,
 };
 
 Hero17.propTypes = {
@@ -248,10 +279,10 @@ Hero17.propTypes = {
   image19Alt: PropTypes.string,
   image20Alt: PropTypes.string,
 
-  action2: PropTypes.element,
-  action1: PropTypes.element,
-  heading1: PropTypes.element,
-  content1: PropTypes.element,
+  action2: PropTypes.any,
+  action1: PropTypes.any,
+  heading1: PropTypes.any,
+  content1: PropTypes.any,
 };
 
 export default Hero17;

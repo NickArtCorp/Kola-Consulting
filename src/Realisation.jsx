@@ -21,7 +21,7 @@ const Realisation = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 250);
     return () => clearTimeout(timer);
   }, []);
 
@@ -33,67 +33,68 @@ const Realisation = () => {
   if (loading) return <Spinner />;
 
   return (
-    <main role="main" className={`${isDropdownHovered ? 'backdrop-blur-sm' : ''} font-sans`}>
+    <div className={`min-h-screen flex flex-col bg-gray-50/50 dark:bg-gray-900 font-sans text-gray-900 dark:text-gray-100 transition-colors ${isDropdownHovered ? 'backdrop-blur-sm' : ''}`}>
       <Navbar
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
-        setAppliedSearchQuery={handleApplySearch} // Pass the function to apply search
+        setAppliedSearchQuery={handleApplySearch}
       />
 
-      {/* The SearchBar component you already have. Make sure it also uses `searchQuery` and `setSearchQuery` */}
-      <SearchBar
-        mode={viewMode}
-        selectedVideoType={selectedVideoType}
-        setSelectedVideoType={setSelectedVideoType}
-        selectedImageType={selectedImageType}
-        setSelectedImageType={setSelectedImageType}
-        searchQuery={searchQuery} // Pass searchQuery to SearchBar
-        setSearchQuery={setSearchQuery} // Pass setSearchQuery to SearchBar
-        setAppliedSearchQuery={handleApplySearch} // Pass the function to apply search
-      />
+      <main className="flex-1 pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+        <SearchBar
+          mode={viewMode}
+          selectedVideoType={selectedVideoType}
+          setSelectedVideoType={setSelectedVideoType}
+          selectedImageType={selectedImageType}
+          setSelectedImageType={setSelectedImageType}
+          searchQuery={searchQuery}
+          setSearchQuery={setSearchQuery}
+          setAppliedSearchQuery={handleApplySearch}
+        />
 
-      {/* View Mode Toggle */}
-      <div className="flex justify-center my-6">
-        <div className="flex bg-gray-200 rounded-full p-1 shadow-md">
-          <button
-            className={`px-6 py-2 rounded-full transition-all duration-700 ${
-              viewMode === 'videos' ? 'bg-[#e32c66] text-white shadow' : 'text-gray-600'
-            }`}
-            onClick={() => {
-              setViewMode('videos');
-              setSelectedImageType(''); // Clear image type when switching to videos
-              setAppliedSearchQuery(searchQuery); // Re-apply search in case view mode changes
-            }}
-          >
-            {t("videos")}
-          </button>
-          <button
-            className={`px-6 py-2 rounded-full transition-all duration-700 ${
-              viewMode === 'images' ? 'bg-[#e32c66] text-white shadow' : 'text-gray-600'
-            }`}
-            onClick={() => {
-              setViewMode('images');
-              setSelectedVideoType(''); // Clear video type when switching to images
-              setAppliedSearchQuery(searchQuery); // Re-apply search in case view mode changes
-            }}
-          >
-            {t("images")}
-          </button>
+        {/* View Mode Toggle */}
+        <div className="flex justify-center my-8">
+          <div className="inline-flex bg-gray-200/80 dark:bg-gray-800 rounded-full p-1 shadow-xs border border-gray-300/60 dark:border-gray-700/60">
+            <button
+              className={`px-6 py-2 rounded-full font-semibold text-sm transition-all duration-300 ${
+                viewMode === 'videos' ? 'bg-[#e32c66] text-white shadow-sm' : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
+              }`}
+              onClick={() => {
+                setViewMode('videos');
+                setSelectedImageType('');
+                setAppliedSearchQuery(searchQuery);
+              }}
+            >
+              {t("videos") || "Vidéos"}
+            </button>
+            <button
+              className={`px-6 py-2 rounded-full font-semibold text-sm transition-all duration-300 ${
+                viewMode === 'images' ? 'bg-[#e32c66] text-white shadow-sm' : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
+              }`}
+              onClick={() => {
+                setViewMode('images');
+                setSelectedVideoType('');
+                setAppliedSearchQuery(searchQuery);
+              }}
+            >
+              {t("images") || "Photos & Galeries"}
+            </button>
+          </div>
         </div>
-      </div>
 
-      {/* Gallery */}
-      {viewMode === 'videos' ? (
-        <section>
-          <VideoGallery selectedVideoType={selectedVideoType} searchQuery={appliedSearchQuery} />
-        </section>
-      ) : (
-        <section>
-          <ImageGallery selectedImageType={selectedImageType} searchQuery={appliedSearchQuery} />
-        </section>
-      )}
+        {/* Gallery */}
+        {viewMode === 'videos' ? (
+          <section>
+            <VideoGallery selectedVideoType={selectedVideoType} searchQuery={appliedSearchQuery} />
+          </section>
+        ) : (
+          <section>
+            <ImageGallery selectedImageType={selectedImageType} searchQuery={appliedSearchQuery} />
+          </section>
+        )}
+      </main>
       <Footer />
-    </main>
+    </div>
   );
 };
 

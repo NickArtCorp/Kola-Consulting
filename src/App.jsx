@@ -22,7 +22,7 @@ function App() {
     <ThemeProvider>
       
       <Router>
-        <main className="flex min-h-screen items-center justify-center gap-2 bg-gray-100 dark:bg-gray-800 font-sans">
+        <div className="min-h-screen w-full bg-gray-50/50 dark:bg-gray-900 font-sans text-gray-900 dark:text-gray-100 flex flex-col">
           
             <Routes>
             <Route path="/" element={<Home />} />
@@ -49,7 +49,7 @@ function App() {
             <Route path={t('/Kola-consulting/Contact')} element={<Contact />} />
             <Route path="*" element={<Home />} />
             </Routes>
-        </main>
+        </div>
       </Router> 
     </ThemeProvider>
     </DropdownProvider>

@@ -19,18 +19,27 @@ function Home() {
 
   const handleGetStarted = () => {
     const element = document.getElementById('ready');
-    element.scrollIntoView({ behavior: 'smooth' });
+    if (element) {
+      const yOffset = -85;
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
   };
 
   const handleLearnMore = () => {
     const element = document.getElementById('discover');
-    element.scrollIntoView({ behavior: 'smooth' });
-  }
+    if (element) {
+      const yOffset = -85;
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  };
 
   useEffect(() => {
+    // Quick, smooth initial reveal
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 400);
 
     return () => clearTimeout(timer);
   }, []);
@@ -40,23 +49,18 @@ function Home() {
   }
 
   return (
-    <main className="font-sans">
+    <main className="font-sans pt-20 md:pt-24 min-h-screen bg-gray-50/50 dark:bg-gray-900 transition-colors">
       <Navbar />
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
 
       <Hero17
         action2={
           <Fragment>
-            <span className="home-text114 font-sans " onClick={handleLearnMore}>{t("learnMore")}</span>
+            <span className="home-text114 font-sans">{t("learnMore")}</span>
           </Fragment>
         }
         action1={
           <Fragment>
-            <span className="home-text115 font-sans" onClick={handleGetStarted}>{t("getStarted")}</span>
+            <span className="home-text115 font-sans">{t("getStarted")}</span>
           </Fragment>
         }
         heading1={
@@ -71,7 +75,11 @@ function Home() {
             </span>
           </Fragment>
         }
-      ></Hero17>
+      />
+
+      <Steps2 />
+
+      <Realisation_mini />
 
       <CTA26
         heading1={
@@ -93,53 +101,9 @@ function Home() {
             <span className="home-text126 font-sans">{t("getInTouch")}</span>
           </Fragment>
         }
-      ></CTA26>
+      />
 
-      <Realisation_mini className="font-sans " />
-
-      <Footer4
-        id="discover"
-        link5={
-          <Fragment>
-            <span className="home-text214 font-sans">Link 5</span>
-          </Fragment>
-        }
-        link3={
-          <Fragment>
-            <span className="home-text215 font-sans">Link 3</span>
-          </Fragment>
-        }
-        link1={
-          <Fragment>
-            <span className="home-text216 font-sans">Link 1</span>
-          </Fragment>
-        }
-        termsLink={
-          <Fragment>
-            <span className="home-text217 font-sans">Terms of Service</span>
-          </Fragment>
-        }
-        link2={
-          <Fragment>
-            <span className="home-text218 font-sans">Link 2</span>
-          </Fragment>
-        }
-        link4={
-          <Fragment>
-            <span className="home-text219 font-sans">Link 4</span>
-          </Fragment>
-        }
-        cookiesLink={
-          <Fragment>
-            <span className="home-text220 font-sans">Cookies Settings</span>
-          </Fragment>
-        }
-        privacyLink={
-          <Fragment>
-            <span className="home-text221 font-sans">Privacy Policy</span>
-          </Fragment>
-        }
-      ></Footer4>
+      <Footer4 />
     </main>
   )
 }

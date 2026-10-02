@@ -9,10 +9,9 @@ const Services = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate loading time
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 3000); // Adjust duration as needed
+    }, 200);
 
     return () => clearTimeout(timer);
   }, []);
@@ -21,17 +20,15 @@ const Services = () => {
     return <Spinner />;
   }
 
-
   return (
-
-    <main className='font-sans'>
-      <Navbar/>
-      <ServiceSection/>
-      <Footer/>
-    </main>
-
+    <div className='min-h-screen flex flex-col bg-gray-50/50 dark:bg-gray-900 font-sans text-gray-900 dark:text-gray-100 transition-colors'>
+      <Navbar />
+      <main className="flex-1">
+        <ServiceSection />
+      </main>
+      <Footer />
+    </div>
   );
-
 };
 
 
