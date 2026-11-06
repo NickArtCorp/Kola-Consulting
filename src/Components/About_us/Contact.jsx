@@ -113,7 +113,7 @@ const Contact = () => {
     const mailtoBody = encodeURIComponent(
       `Nom: ${formData.user_name}\nEmail: ${formData.user_email}\nTéléphone: ${formData.phone}\n\nMessage:\n${formData.message}`
     );
-    const mailtoLink = `mailto:gregnickyatch@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
+    const mailtoLink = `mailto:kolaconsulting.cabinet@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
     const whatsappText = encodeURIComponent(
       `Bonjour Kola Consulting,\nJe m'appelle ${formData.user_name} (${formData.user_email}${formData.phone ? ` / ${formData.phone}` : ""}).\n\n${formData.message}`
     );
@@ -141,7 +141,7 @@ const Contact = () => {
       console.warn('Email service notice:', errDetail);
 
       setStatusMessage(
-        "Le service de messagerie automatique rencontre une maintenance. Vous pouvez transmettre directement votre message pré-rempli à gregnickyatch@gmail.com ou par WhatsApp :"
+        "Le service de messagerie automatique rencontre une maintenance. Vous pouvez transmettre directement votre message pré-rempli à kolaconsulting.cabinet@gmail.com ou par WhatsApp :"
       );
       setMessageType("error");
       setShowMessage(true);
@@ -329,8 +329,8 @@ const Contact = () => {
                     <span className="block text-xs font-semibold uppercase tracking-wider text-gray-400">
                       Courriel
                     </span>
-                    <a href="mailto:gregnickyatch@gmail.com" className="text-sm sm:text-base font-medium text-gray-900 dark:text-white hover:text-[#e32c66] transition-colors">
-                      gregnickyatch@gmail.com
+                    <a href="mailto:kolaconsulting.cabinet@gmail.com" className="text-sm sm:text-base font-medium text-gray-900 dark:text-white hover:text-[#e32c66] transition-colors">
+                      kolaconsulting.cabinet@gmail.com
                     </a>
                   </div>
                 </li>
@@ -344,7 +344,7 @@ const Contact = () => {
                       Téléphone & WhatsApp
                     </span>
                     <a href="tel:+237699932489" className="text-sm sm:text-base font-medium text-gray-900 dark:text-white hover:text-[#e32c66] transition-colors">
-                      +237 699 93 24 89 / 671 15 42 74
+                      +237 699 93 24 89
                     </a>
                   </div>
                 </li>

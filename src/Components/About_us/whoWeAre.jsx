@@ -105,7 +105,7 @@ const KolaConsulting = () => {
             <div>
               <div className="text-xs text-gray-500 dark:text-gray-400">Ligne directe & WhatsApp</div>
               <div className="font-semibold text-gray-900 dark:text-white">
-                (237) 699 93 24 89 / 671 15 42 74
+                +237 699 93 24 89
               </div>
             </div>
           </div>
@@ -115,8 +115,8 @@ const KolaConsulting = () => {
             </div>
             <div>
               <div className="text-xs text-gray-500 dark:text-gray-400">Courriel officiel</div>
-              <a href="mailto:gregnickyatch@gmail.com" className="font-semibold text-gray-900 dark:text-white hover:text-[#e32c66] transition-colors">
-                gregnickyatch@gmail.com
+              <a href="mailto:kolaconsulting.cabinet@gmail.com" className="font-semibold text-gray-900 dark:text-white hover:text-[#e32c66] transition-colors">
+                kolaconsulting.cabinet@gmail.com
               </a>
             </div>
           </div>
